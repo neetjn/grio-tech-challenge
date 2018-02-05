@@ -1,21 +1,22 @@
 {
   "name": "grio-tech-challenge",
   "version": "1.0.0",
-  "description": "SPA built with Python/Flask, Preact, to search for users in Postgres database. ",
+  "description": "SPA built with Python/Flask, React, to search for users in Postgres database. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node_modules/.bin/eslint **.jsx",
+    "test": "",
     "bundle": "node_modules/.bin/webpack --config webpack.config.js",
     "build": "npm run lint && npm run build && npm run test",
-    "dev": "./node_modules/.bin/webpack-dev-server --config build/webpack.conf.js --hot --host 0.0.0.0 --port 3000",
-    "start": "./node_modules/.bin/webpack-dev-server --config build/webpack.conf.js --cache --host 0.0.0.0 --port 3000 --public my-host.com"
+    "dev": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --hot --host 0.0.0.0 --port 3000",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --cache --host 0.0.0.0 --port 3000 --public my-host.com"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/neetjn/grio-tech-challenge.git"
   },
   "keywords": [
-    "preact",
+    "react",
     "jest",
     "javascript",
     "node",
@@ -45,9 +46,9 @@
     "foundation-icons": "^1.0.1",
     "google-fonts-webpack-plugin": "^0.4.4",
     "jest": "^22.1.4",
-    "preact": "^8.2.7",
-    "preact-compat": "^3.18.0",
-    "react-router": "^4.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
     "url-loader": "^0.6.2",

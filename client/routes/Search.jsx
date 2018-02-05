@@ -1,12 +1,12 @@
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 
-export default class Search extends Component {
+export class Search extends Component {
 
   render() {
     return(
-      <Search>
+      <search>
         <h1>Search</h1>
-      </Search>
+      </search>
     )
   }
 

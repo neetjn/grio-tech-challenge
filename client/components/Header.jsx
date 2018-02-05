@@ -1,12 +1,12 @@
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 
-export default class Header extends Component {
+export class Header extends Component {
 
   render() {
     return(
-      <Header>
+      <header>
         <h1>Header</h1>
-      </Header>
+      </header>
     )
   }
 

@@ -2,19 +2,11 @@ const path = require('path')
 const googleFontsPlugin = require('google-fonts-webpack-plugin')
 
 module.exports = {
-  entry: './App.jsx',
+  entry: './main.js',
   output: {
     path: path.join(__dirname, './dist'),
     publicPath: 'dist/',
-    filename: 'app.js',
-  },
-  resolve: {
-    alias: {
-      'react': 'preact-compat',
-      'react-dom': 'preact-compat',
-      // Not necessary unless you consume a module using `createClass`
-      'create-react-class': 'preact-compat/lib/create-react-class'
-    }
+    filename: 'app.js'
   },
   externals : {
     document: 'document'
@@ -55,7 +47,7 @@ module.exports = {
           { loader: 'css-loader' }
         ]
       },
-      { test: /\.html$/, loader: 'raw-loader'},
+      { test: /\.html$/, loader: 'raw-loader' },
       { test: /\.(png|jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/, loader: 'url-loader' },
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader' }
     ]
