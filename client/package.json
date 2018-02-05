@@ -8,8 +8,8 @@
     "lint": "node_modules/.bin/eslint **.vue",
     "test": "test",
     "build": "npm run bundle && npm run test",
-    "dev": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --hot --host 0.0.0.0 --port 3000",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --cache --host 0.0.0.0 --port 3000 --public site.com"
+    "dev": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --hot --host 0.0.0.0 --port 8080",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --cache --host 0.0.0.0 --port 8080 --public site.com"
   },
   "author": "John Nolette <john@neetgroup.net>",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "bulma": "^0.6.2",
+    "bulmaswatch": "^0.6.1",
     "css-loader": "^0.28.9",
     "eslint": "^4.17.0",
     "eslint-loader": "^1.9.0",
@@ -30,6 +31,7 @@
     "google-fonts-webpack-plugin": "^0.4.4",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
+    "sass-resources-loader": "^1.3.2",
     "style-loader": "^0.20.1",
     "url-loader": "^0.6.2",
     "v-localize": "^1.1.7",

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <section id="view">
       <router-view />
     </section>
@@ -8,6 +8,6 @@
 
 <script>
   export default {
-    name: 'app'
+    name: 'App'
   }
 </script>

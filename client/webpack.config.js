@@ -8,6 +8,14 @@ module.exports = {
     publicPath: 'dist/',
     filename: 'app.js'
   },
+  resolve: {
+    extensions: ['.js', '.vue', '.json', '.scss'],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+      '@':  path.join(__dirname, './'),
+      'styles': path.join(__dirname, './assets/styles'),
+    }
+  },
   externals : {
     document: 'document'
   },
@@ -26,13 +34,7 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            js: 'babel-loader',
-            scss: [
-              'vue-style-loader!css-loader!sass-loader',
-              {
-                loader: 'sass-resources-loader'
-              }
-            ]
+            js: 'babel-loader'
           }
         }
       },

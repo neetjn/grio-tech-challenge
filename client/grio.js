@@ -1,10 +1,11 @@
-import './assets/styles/main.scss'
+import '@/assets/styles/main.scss'
 
 import Vue from 'vue'
 import App from './components/App.vue'
-import { router } from './router'
+import Router from './router'
 
 new Vue({
-  router,
+  Router,
+  el: '#root',
   render: h => h(App)
-}).$mount('app')
+}).$mount('#root')
