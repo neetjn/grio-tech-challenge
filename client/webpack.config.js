@@ -2,7 +2,7 @@ const path = require('path')
 const googleFontsPlugin = require('google-fonts-webpack-plugin')
 
 module.exports = {
-  entry: './main.js',
+  entry: './grio.js',
   output: {
     path: path.join(__dirname, './dist'),
     publicPath: 'dist/',
@@ -22,13 +22,28 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js|.jsx$/,
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            js: 'babel-loader',
+            scss: [
+              'vue-style-loader!css-loader!sass-loader',
+              {
+                loader: 'sass-resources-loader'
+              }
+            ]
+          }
+        }
+      },
+      {
+        test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
             babelrc: false,
-            presets: ['react', 'env']
+            presets: ['env']
           }
         }
       },
