@@ -162,3 +162,4 @@ node_modules/
 venv/
 .vscode/
 test_*.png
+.pytest_cache
