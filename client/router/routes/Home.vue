@@ -33,11 +33,11 @@
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title">
+        <h1 class="title animated fadeInUp">
           Search
         </h1>
         <h2 class="subtitle">
-          <SearchBar />
+          <SearchBar class="animated fadeInDown" />
         </h2>
       </div>
     </div>
@@ -58,7 +58,13 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  .hero-body {
+    padding-bottom: 12rem;
+    & h1 {
+      padding-bottom: 1.5rem;
+    }
+  }
   .hero-foot {
     padding-bottom: 2rem;
   }
