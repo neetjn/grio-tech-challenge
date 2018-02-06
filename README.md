@@ -83,3 +83,7 @@ pytest --cov=grio.core test
 What I wasn't able to get to due to a lack of time was client sided test. I'd planned to write up a few simple tests using Jest, but I'd have to mock the Vue event dispatcher which I didn't have time to deal with prior to submission.
 
 I also planned to add pagination to the frontend, it's already supported by the backend.
+
+---
+
+Copyright (c) 2017 John Nolette Licensed under the MIT license.
