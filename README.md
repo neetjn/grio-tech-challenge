@@ -63,4 +63,4 @@ What I wasn't able to get to due to a lack of time was client sided test. I'd pl
 
 I also planned to add pagination to the frontend, it's already supported by the backend.
 
-I'd planned to have the entire app dockerize and ship it with a docker compose / ansible playbook, though it seems Pipenv cannot currently (2/6/18) in a dockerized environment.
+I'd planned to have the entire app dockerize and ship it with a docker compose / ansible playbook, though it seems Pipenv cannot currently (2/6/18) function properly in a dockerized environment.
