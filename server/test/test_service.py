@@ -10,7 +10,7 @@ class TestPerson(TestCase):
         drop_database()
 
     def test_service(self):
-        print(get_people())
+        """Ensure basic person/people resource endpoints function as expected"""
         self.assertEqual(len(get_people()[0].people), 0)
         person_dto, person_id = create_person(PersonDto(
             name='John Doe',
