@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cbaf3d66739902c82fe571d403732b8f4638e8ba12c516d92cd896b93ce4e35b"
+            "sha256": "8942b78ea7c92ff9c5939a600c6437ad349bafe0c43643abe492f614bb0fb5d4"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -53,6 +53,14 @@
                 "sha256:49f44461237b69ecd901cc7ce66feea0319b9158743dd27a2899962ab214dac1"
             ],
             "version": "==0.12.2"
+        },
+        "flask-cors": {
+            "hashes": [
+                "sha256:55eb3864b4290f939ff19a2250fcb47d8c0f63d250c6780b922629299d011ec8",
+                "sha256:ac4b81b3d90f5f18714c995c807f94501df8c9bbc22ef4261c1cd850748c3850",
+                "sha256:62ebc5ad80dc21ca0ea9f57466c2c74e24a62274af890b391790c260eb7b754b"
+            ],
+            "version": "==3.0.3"
         },
         "flask-responses": {
             "hashes": [
@@ -136,9 +144,9 @@
         },
         "peewee": {
             "hashes": [
-                "sha256:13c27d393fee89b121b70f073daaad709bb67a04a252abd7c914bd93d9ba847b"
+                "sha256:6509637882aef7e51e85d006a839e2fde8a451a5bc81b8324ddd029f08157a22"
             ],
-            "version": "==3.0.11"
+            "version": "==3.0.13"
         },
         "psycopg2": {
             "hashes": [

@@ -3,10 +3,10 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
-          Search
+          About
         </h1>
         <h2 class="subtitle">
-          Full Height subtitle
+          ...
         </h2>
       </div>
     </div>
@@ -15,9 +15,6 @@
 
 <script>
   export default {
-    name: 'Search'
+    name: 'About'
   }
 </script>
-
-<style>
-</style>

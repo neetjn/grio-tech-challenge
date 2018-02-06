@@ -66,7 +66,7 @@ def bootstrap(data=None):
         else:
             secondary_address = None
 
-        Person.insert(
+        Person.create(
             name=person['name'],
             phone=person['phone'],
             primary_address=primary_address,

@@ -29,8 +29,6 @@
         </div>
       </nav>
     </div>
-
-    <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title animated fadeInUp">
@@ -39,12 +37,37 @@
         <h2 class="subtitle">
           <SearchBar class="animated fadeInDown" />
         </h2>
+        <h2 class="subtitle" v-if="people.length">
+          <span id="user-count" />
+          People
+        </h2>
+        <div class="columns is-multiline">
+          <div class="column is-4 animated rubberBand" v-for="person in people" :key="person">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img src="../../assets/images/torso.png" />
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p>{{ person.name }}</p>
+                    <p>{{ person.phone }}</p>
+                  </div>
+                </div>
+                <div class="content has-text-left">
+                  {{ person.line1 }}, {{ person.city }}, {{ person.state }}, {{ person.zip }}
+                  <br>
+                  <small>{{ person.line2 }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Hero footer: will stick at the bottom -->
     <div class="hero-foot has-text-centered">
-      <span id="user-count" /> Records
       <h1>Web App by John Nolette</h1>
       <img id="vue-logo" src="../../assets/images/vue.svg" />
     </div>
@@ -58,12 +81,25 @@
   export default {
     name: 'Home',
     components: { SearchBar },
+    data() {
+      return {
+        people: []
+      }
+    },
     mounted: function() {
-      anime({
-        targets: '#user-count',
-        textContent: 1000,
-        round: 1,
-        easing: 'easeInOutExpo'
+      this.$on('searching', function() {
+        // # can add some loading animation
+      })
+      this.$on('completed', function(people) {
+        this.$data.people = people
+        setTimeout(function() {
+          anime({
+            targets: '#user-count',
+            textContent: people.length,
+            round: 1,
+            easing: 'easeInOutExpo'
+          })
+        }, 500)
       })
     }
   }
