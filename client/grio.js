@@ -6,8 +6,9 @@ import router from './router'
 
 import axios from 'axios'
 
-const API_HOST = process.env.api_host || 'http://127.0.0.1'
-const API_PORT = process.env.api_port || 3300
+// # TODO: add runtime support with webpack dev middleware
+const API_HOST = process.env.API_HOST || 'http://127.0.0.1'
+const API_PORT = process.env.API_PORT || 3300
 
 Vue.prototype.$http = axios
 // # TODO: create a service description -- pull links from apiroot

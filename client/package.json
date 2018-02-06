@@ -9,7 +9,8 @@
     "test": "test",
     "build": "npm run bundle && npm run test",
     "dev": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --hot --host 0.0.0.0 --port 8080",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --cache --host 0.0.0.0 --port 8080 --public site.com"
+    "prod": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --cache --host 0.0.0.0 --port 8080 --public site.com",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --cache --host 0.0.0.0 --port 8080 --public"
   },
   "author": "John Nolette <john@neetgroup.net>",
   "license": "MIT",

@@ -12,7 +12,7 @@ I tried to build the CRUD api in a manner where it would very easily be converte
 
 Backend
 
-- Python 3
+- Python 2.7
 - Flask (http server)
 - Peewee (Orm for Postgres)
 - pytest
@@ -34,7 +34,6 @@ All database and app configurations can be found in the `grio/constants.py` modu
 
 Use `python -m grio` to start the flask app. To bootstrap your environment for first time use, use `BOOTSTRAP=1 python -m grio`.
 
-
 All frontend dependencies can be installed like so,
 
 ```bash
@@ -53,6 +52,21 @@ Runnin the application in your dev environment is also as easy as,
 npm run dev
 ```
 
+### Deployment
+
+You can deploy the application locally with docker compose like so,
+
+```bash
+docker-compose build
+DOCKER_HOST_IP=10.0.2.15 docker-compose up
+```
+
+For bootstrapping the database,
+
+```bash
+BOOTSTRAP=1 DOCKER_HOST_IP=10.0.2.15 docker-compose up
+```
+
 ## Testing
 
 The backend tests *only* cover the application core, I didn't actually mock out requests because it wouldn't yield efficient or relevant results.
@@ -62,5 +76,3 @@ The backend tests *only* cover the application core, I didn't actually mock out 
 What I wasn't able to get to due to a lack of time was client sided test. I'd planned to write up a few simple tests using Jest, but I'd have to mock the Vue event dispatcher which I didn't have time to deal with prior to submission.
 
 I also planned to add pagination to the frontend, it's already supported by the backend.
-
-I'd planned to have the entire app dockerize and ship it with a docker compose / ansible playbook, though it seems Pipenv cannot currently (2/6/18) function properly in a dockerized environment.
