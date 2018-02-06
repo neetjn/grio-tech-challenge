@@ -15,7 +15,6 @@ Backend
 - Python 2.7
 - Flask (http server)
 - Peewee (Orm for Postgres)
-- pytest
 
 Frontend
 
@@ -76,6 +75,8 @@ To test with coverage, you can leverage `pytest` installed with the dev dependen
 ```bash
 pytest --cov=grio.core test
 ```
+
+**Note** if you're in a production environment, be sure to properly modify the constants or set your environmental variables. The server tests clean the target database.
 
 ## Lacking
 
