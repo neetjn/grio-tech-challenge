@@ -34,7 +34,16 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            js: 'babel-loader'
+            js: 'babel-loader',
+            scss: [
+              'vue-style-loader!css-loader!sass-loader',
+              {
+                loader: 'sass-resources-loader',
+                options: {
+                  resources: path.join(__dirname, './assets/styles/main.scss')
+                }
+              }
+            ]
           }
         }
       },

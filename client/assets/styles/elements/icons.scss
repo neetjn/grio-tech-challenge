@@ -1,0 +1,25 @@
+.ico {
+  display: inline-block;
+  &.ico-block {
+    display: block;
+  }
+  &.ico-left {
+    padding-right: $ico-dist;
+  }
+  &.ico-right {
+    padding-left: $ico-dist;
+  }
+  &.ico-fixed {
+    @extend .ico-left;
+    @extend .ico-right;
+  }
+  &.ico-2x {
+    font-size: larger;
+  }
+  &.ico-xl {
+    font-size: x-large;
+  }
+  &.ico-xxl {
+    font-size: xx-large;
+  }
+}

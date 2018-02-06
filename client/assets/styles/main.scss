@@ -3,3 +3,7 @@
 @import '~bulmaswatch/materia/_overrides.scss';
 @import '~foundation-icons/foundation-icons.css';
 @import '~animate.css';
+
+@import './variables.scss';
+@import './mixins/_all.scss';
+@import './elements/_all.scss';
