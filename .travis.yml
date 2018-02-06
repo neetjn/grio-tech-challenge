@@ -1,0 +1,18 @@
+dist: trusty
+language: python
+python:
+  - '2.7'
+env:
+  - NODE_VERSION="8"
+before_install:
+  - nvm install $NODE_VERSION
+  - pip install codecov
+  - pip install pipenv
+install:
+  - npm install --prefix client
+  - cd server && pipenv install --system && cd ..
+before_script:
+  - docker run --rm -p -d 5432:5432 postgres
+script:
+  - npm run lint --prefix client
+  - pytest --cov grio.core server/test

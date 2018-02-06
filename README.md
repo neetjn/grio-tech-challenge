@@ -71,6 +71,12 @@ BOOTSTRAP=1 DOCKER_HOST_IP=10.0.2.15 docker-compose up
 
 The backend tests *only* cover the application core, I didn't actually mock out requests because it wouldn't yield efficient or relevant results.
 
+To test with coverage, you can leverage `pytest` installed with the dev dependencies from our Pipfile.
+
+```bash
+pytest --cov=grio.core test
+```
+
 ## Lacking
 
 What I wasn't able to get to due to a lack of time was client sided test. I'd planned to write up a few simple tests using Jest, but I'd have to mock the Vue event dispatcher which I didn't have time to deal with prior to submission.
