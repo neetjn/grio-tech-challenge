@@ -142,7 +142,7 @@ def delete_person(person_id):
     if person.deleted:
         raise PersonNotFoundError()
     person.is_deleted = True
-    person.deleted = datetime.datetime.utcnow
+    person.deleted = datetime.datetime.utcnow()
     person.save()
 
 
