@@ -86,4 +86,4 @@ I also planned to add pagination to the frontend, it's already supported by the 
 
 ---
 
-Copyright (c) 2017 John Nolette Licensed under the MIT license.
+Copyright (c) 2017 - present John Nolette Licensed under the MIT license.
